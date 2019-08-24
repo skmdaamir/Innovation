@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta nsme="viewreport" content="width=device-width, initial-scale=1.0">
 <style>
+  html, body {
+           top:0px;
+           padding-top:0;
+           margin:auto; 
+           position:relative;
+           width:auto;
+           height:100%;
+            }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #5F1C08;
+  background-color: rgb(92, 70, 214);
+} 
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-
 li {
   float: left;
 }
@@ -203,33 +214,104 @@ img {vertical-align: middle;}
     border: 1px solid #ccc; 
   }
 }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(70, 192, 166);
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.signup{
+  float: right;
+}
+
+
+.paragraph {
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    padding: 10px 30px;
+    line-height: 1.8;
+}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-    .paragraph {
-        width:1500px;
-        text-align: center;
-    }
 </style>
 </head>
 <body>
-<img src="logo.jpg" alt="Logo">
+  <a href="Project.html">
+<img src="logo.jpg" alt="Home">
+  </a>
 <ul>
   <li><a class="active" href="Project.html">Home</a></li>
-  <li><a href="#aboutus">About us</a></li>
-  <li><a href="#gallery">Gallery</a></li>
-  <li><a href="#department">Department</a></li>
-  <li><a href="#live" style="background-color:red">Live</a></li>
-  <li><a href="#events">Events</a></li>
-  <li><a href="#project">Project</a></li>
+  <li><a class="active" href="#aboutus">About us</a></li>
+  <li><a class="active" href="#gallery">Gallery</a></li>
+  <div class="dropdown">
+      <li><button class="dropbtn">Department</button>
+      <div class="dropdown-content">
+      <a href="Project.html">Mechanical Engineering</a>
+      <a href="Project.html">Civil Engineering</a>
+      <a href="Project.html">Electrical Engineering</a>
+      <a href="Project.html">Electronics Engineering</a>
+      <a href="Project.htmll">Computer Engineering</a>
+      <a href="Project.html">Information Technology</a>
+      <a href="Project.html">Chemical Engineering</a>
+      <a href="Project.html">Biomedical Engineering</a>
+      <a href="Project.html">Biotechnology Engineering</a>
+      </li></div>
+     
+  </div>
+  <li><a class="active" href="#live" style="background-color:red">Live</a></li>
+  <li><a class="active" href="#events">Events</a></li>
+  <li><a class="active" href="#project">Project</a></li>
   <div class="topnav-right">
-  <li><a href="login.html">Log in</a></li>
-  
-  <li><a href="signup.html">Sign up</a></li>
- </div>
+    <div class="dropdown">
+      <li><button class="dropbtn">Log in</button>
+      <div class="dropdown-content">
+      <a href="login.html">Faculty</a>
+      <a href="login.html">Student</a></li></div>
+     
+  </div>
+  <div class="signup">
+  <li><a href="signup.html">Sign up</a></li></div>
 </ul>
-
 <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -259,6 +341,7 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 </div>
 
 <script>
@@ -290,11 +373,10 @@ function showSlides(n) {
 }
 
 </script>
-    <br>
-    <div class="paragraph" align="center">
-    <p>MGM's College of Engineering and Technology(MGMCET) is governed by Mahatma Gandhi Mission, a Charitable Trust Act 1950 and Societies Regulation Act 1860. Since its inception in 1982, Mahatma Gandhi Mission has developed into an excellent educational group and is totally committed to human resource development. MGM is now a chain of Engineering, Medical, Nursing, Management, Dental, Physiotherapy, Science, Journalism and Fine Arts spread over four educational centres - Navi Mumbai , Nanded, Aurangabad and Noida. In continuation of its proud tradition of enriching the human resource needs of the country, the Mission has set up in 1986, our institute MGM’s College of Engineering & Technology, Kamothe, Navi Mumbai.The objective of the institution is to impart value based quality education by combining academics with exposure to industry. With this view in mind it provides state-of-the art infrastructure facilities & academic resources to its students.</p>
-        <p>College is affiliated to University of Mumbai and approved by AICTE, New Delhi. MGMCET is awarded with ISO-9001-2000 Certification by RINA for providing technical education in engineering field as per the guidelines of University of Mumbai. The institute is one of the few engineering colleges to achieve this international standard for implementing and maintaining Quality Management System. The four courses viz. Computer, Electronics & Telecommunications, Biomedical & Civil are accredited by NBA of AICTE. MGMCET is housed in a spacious Campus near Panvel at the junction of NH-4 and Mumbai-Pune Expressway but in a modern style of Architecture, best suited to secure the requisite effect of simplicity & dignity, which should be associated with the technological institute. It maintains picturesque and lush green gardens around to provide a soothing atmosphere conducive to learning. Admission to the institute is as per the conditions laid down by Directorate of Technical Education, Maharashtra State.</p></div>
-
+<div class="paragraph">
+<p align="center"> MGM's College of Engineering and Technology(MGMCET) is governed by Mahatma Gandhi Mission, a Charitable Trust Act 1950 and Societies Regulation Act 1860. Since its inception in 1982, Mahatma Gandhi Mission has developed into an excellent educational group and is totally committed to human resource development. MGM is now a chain of Engineering, Medical, Nursing, Management, Dental, Physiotherapy, Science, Journalism and Fine Arts spread over four educational centres - Navi Mumbai , Nanded, Aurangabad and Noida. In continuation of its proud tradition of enriching the human resource needs of the country, the Mission has set up in 1986, our institute MGM’s College of Engineering & Technology, Kamothe, Navi Mumbai.The objective of the institution is to impart value based quality education by combining academics with exposure to industry. With this view in mind it provides state-of-the art infrastructure facilities & academic resources to its students.</p>
+<p align="center">College is affiliated to University of Mumbai and approved by AICTE, New Delhi. MGMCET is awarded with ISO-9001-2000 Certification by RINA for providing technical education in engineering field as per the guidelines of University of Mumbai. The institute is one of the few engineering colleges to achieve this international standard for implementing and maintaining Quality Management System. The four courses viz. Computer, Electronics & Telecommunications, Biomedical & Civil are accredited by NBA of AICTE. MGMCET is housed in a spacious Campus near Panvel at the junction of NH-4 and Mumbai-Pune Expressway but in a modern style of Architecture, best suited to secure the requisite effect of simplicity & dignity, which should be associated with the technological institute. It maintains picturesque and lush green gardens around to provide a soothing atmosphere conducive to learning. Admission to the institute is as per the conditions laid down by Directorate of Technical Education, Maharashtra State.</p>
+</div>
 </body>
 </html>
 
