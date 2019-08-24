@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+* {
+  box-sizing: border-box
+  }
+
+/* Full-width input fields */
+
+input[type=text], input[type=text], input[type=tel], input[type=date], input[type=email], input[type=password], input[type=text] {
+  width: 20%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1c8c8;
+}
+
+input[type=text]:focus, input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:0.8;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  padding: 14px 21px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+.cancelbtn, .signupbtn {
+  width: 15%
+}
+
+ /* Add padding to container elements */
+
+ .container {
+  padding: 16px;
+ }
+
+ /* Clear floats */
+
+ .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+ }
+
+ /* Change styles for cancel button and signup button on extra small screens */
+
+ @media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+ }
+
+ label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+ }
+
+ input,
+ label {
+    margin: .4rem 0;
+ }
+
+</style>
+<body>
+
+<form action="/action_page.php" style="border:1px solid rgb(219, 87, 87)" align="center">
+  <div class="container">
+    <h1 align="center">Sign Up</h1>
+    <p align="center"><b>Please fill in this form to create an account.</b></p>
+<hr>
+
+<!----Create First Name--> 
+	  <label for="firstname"><b>First Name</b></label>
+    <input type="text" placeholder="First Name" name="firstname" required>
+<!----Create Last Name--> 
+    <label for="lastname"><b>Last Name</b></label>
+    <input type="text" placeholder="Last Name" name="lastname" required>
+
+
+<!----Create Mobile no--> 
+
+    <label for="tel"><b>Mobile No.</b></label>
+    <input type="tel" placeholder="Mobile No" name="phone" pattern="[0-9]{10}" required>
+      
+<!----Create Gender--> 
+
+   <label for="gender"><b>Gender</b></label>
+
+   <input type="radio" name="gender" value="male" checked> Male<br>
+
+   <input type="radio" name="gender" value="female"> Female
+
+<!----Create Date of birth--> 
+
+    <label for="start"><b>Date of Birth:</b></label>
+
+   <input type="date" id="start" name="trip-start"
+       value="2019-08-07"
+       min="1947-01-01" max="2019-08-07">
+
+   <!----Create Email--> 
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
+<!----Create Password--> 
+
+
+    <label for="psw"><b>Password (8 Characters minimum)</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" minilength="8" required>
+
+<!----Create Repeat Password--> 
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+   <!----Create Area of Interest--> 
+<br>
+
+    <b>Area of Interest.</b>
+      <p>
+        <label></label>
+        <select id="myList" >
+        <option value="1">Machine Learning</option>
+        <option value="2">Artificial Intelligence</option>
+        <option value="3">Robotics</option>
+        <option value="4">Big Data.</option>
+        </select>
+      </p>
+
+       <!----Create Dream Project--> 
+
+        <label for="text"><b>Dream Project</b></label>
+        <input type="text" placeholder="Tell About Your Dream Project in Brief" name="dreamproject" required>
+
+   <!----Create Check Box--> 
+
+        <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix" align="center">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
